@@ -28,7 +28,7 @@ create table algos (
   users_id integer
 );
 
-insert into users(name, email, created_at) values ('Avery Wong', 'rebellion.ave@gmail.com', NOW());
+insert into users(name, email, created_at) values ('Avery Wong', 'fake@gmail.com', NOW());
 
 insert into experience(title, company, startdate, enddate, bulletpoints, users_id) values('Mathematics Tutor','Tutors For All', '2013-09-01','2015-05-01','• Helped Codman High School students improve their math standardized test scores by creating lesson plans and worksheets and managing student portfolios.', 1);
 insert into experience(title, company, startdate, enddate, bulletpoints. users_id ) values('Software Engineer Intern','O''Neil Digital Solutions', '2018-04-15','2018-08-01','• Built testing automation tools, which included building a Node.js tool to automate the comparison of files within a directory and log whether the contents of the files being compared are different or not, and expediting manual PDF file checking by writing a C# PDF verification tool that would download PDF’s from a database into local directory to verify corruption. • Worked with senior developers to migrate from one existing postal automation software to another by developing SSIS packages and ETL pipelines with SQL and C#. • Managed and updated gitlab repositories by querying the company’s databases to see if occasional changes where made to any Stored Procedures and SSIS packages.', 1);
