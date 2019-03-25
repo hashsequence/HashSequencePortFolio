@@ -25,12 +25,12 @@ $psql --host=localhost --dbname=HashSequencePortfolio -U postgres -a -f setup.sq
 
 ```
 
-##GoServer
+## GoServer
 
 Basically its a simple server implemented with Go.
 
 Implemented RESTful GET API's to get user data and sends json string
 
-##TODO
+## TODO
 
 Build React FrontEnd
