@@ -31,7 +31,7 @@ Basically its a simple server implemented with Go.
 
 Implemented RESTful GET API's to get user data and sends json string
 
-##React Front End
+## React Front End
 
 Build a Sample Front Page for my HashSequencePortfolio
 
