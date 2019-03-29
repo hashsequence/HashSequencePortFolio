@@ -33,8 +33,5 @@ Implemented RESTful GET API's to get user data and sends json string
 
 ## React Front End
 
-Build a Sample Front Page for my HashSequencePortfolio
-
-## TODO
-
-Have React Front End consume API from GoServer
+Built a Sample Front Page for my HashSequencePortfolio that use get to call the Go RESTful API's
+for user info

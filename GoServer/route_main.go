@@ -14,7 +14,7 @@ func index(w http.ResponseWriter, request *http.Request) {
 
 
 func GetUserData(w http.ResponseWriter, request *http.Request) {
-  userJson, err := json.Marshal(data.GetUser(1))
+  userJson, err := json.MarshalIndent(data.GetUser(1), "", "\t")
   if err != nil {
 		log.Fatal("Error Getting User JSON", err)
 	}
@@ -24,7 +24,7 @@ func GetUserData(w http.ResponseWriter, request *http.Request) {
 }
 
 func GetUserExperienceData(w http.ResponseWriter, request *http.Request) {
-  userExpJsonArr, err := json.Marshal(data.GetUserExperience(1))
+  userExpJsonArr, err := json.MarshalIndent(data.GetUserExperience(1), "", "  " )
   if err != nil {
 		log.Fatal("Error Getting User Experience JSON", err)
 	}
