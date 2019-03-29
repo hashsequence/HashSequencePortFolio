@@ -1,6 +1,6 @@
 # HashSequencePortfolio
 
-my Web Portfolio Website
+My Web Portfolio Website
 
 ## Getting Started
 
