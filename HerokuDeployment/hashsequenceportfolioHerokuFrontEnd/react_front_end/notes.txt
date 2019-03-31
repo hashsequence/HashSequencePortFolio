@@ -1,0 +1,4 @@
+config --app hashsequenceportfoliodatabase
+=== hashsequenceportfoliodatabase Config Vars
+DATABASE_URL: postgres://mgjxnhhlqjclgd:7fa6c4fca3862b05d9960dabe5edc578baa3fbb13585c5308d0680c6bc8b10e6@ec2-54-221-201-212.compute-1.amazonaws.com:5432/d6q95i25lo4oco
+avwong13@avw
