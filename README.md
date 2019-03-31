@@ -35,3 +35,8 @@ Implemented RESTful GET API's to get user data and sends json string
 
 Built a Sample Front Page for my HashSequencePortfolio that use get to call the Go RESTful API's
 for user info
+
+## Heroku Deployed website
+
+Work In progress, but here is the first version:
+https://hashseqeunceportfolio.herokuapp.com/
