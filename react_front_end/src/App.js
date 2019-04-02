@@ -12,29 +12,28 @@ class NameHeader extends Component {
       this.state = {Name : "", Summary : ""}
     }
 
-    componentWillMount() {
+    componentDidMount() {
      axios.get(`http://localhost:8080/GetUserData`)
-       .then(res => {
-         const user = res.data;
-         this.setState({Name: user.Name.String, Summary: user.Summary.String});
-       })
-   }
+     .then(res => {
+       const user = res.data;
+       this.setState({user});
+     }).catch(err => {
+       console.log('Show error notification!')
+       return Promise.reject(err)
+     })
+ }
 
-    render() {
-      return (
-        <div id="Header">
-            <h1 className="display">{this.state.Name}</h1>
+  render() {
+          const userProfile = this.state.user.map((e) =>
+            <div className="Header" key={e.toString()}>
+            <h1 className="display">{e.Name.String}</h1>
             <p className="lead">{"Hey guys this my personal website!"}</p>
-            <p className="lead"> {this.state.Summary}</p>
+            <p className="lead"> {e.Summary.String}</p>
             <hr className="my-2" />
-            <p></p>
-            <img width="400"  src={require('./profile.jpg')} />
-            <p className="lead">
-            </p>
-        </div>
-      );
-    }
-
+            <img alt="profilePic" width="400"  src={require('./profile.jpg')} />
+            </div>);
+          return userProfile;
+        }
 };
 
 
@@ -55,7 +54,8 @@ class ExperienceList extends Component {
  render() {
    const bulletPoints = this.state.exps.map((exp)=>
    <div className='Resume' key={exp.toString()}>
-   {exp.Title.String}
+   <h3> {exp.Title.String} at {exp.Company.String}</h3>
+   <h4> {exp.Startdate.String.replace("T00:00:00Z","")} to {exp.Enddate.Valid === true ? exp.Enddate.String.replace("T00:00:00Z","") : "Current"}</h4>
    <p> {exp.Bulletpoints.String} </p>
    </div>);
    return (
