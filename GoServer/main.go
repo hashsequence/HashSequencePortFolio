@@ -11,6 +11,7 @@ func main() {
   // index
 	mux.HandleFunc("/", index)
   mux.HandleFunc("/GetUserData", GetUserData)
+  mux.HandleFunc("/GetUserDataObj", GetUserDataObj)
   mux.HandleFunc("/GetUserExperienceData", GetUserExperienceData)
 
   server := &http.Server{

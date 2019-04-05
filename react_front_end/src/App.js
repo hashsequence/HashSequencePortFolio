@@ -9,7 +9,7 @@ class NameHeader extends Component {
 
   constructor(props) {
       super(props);
-      this.state = {Name : "", Summary : ""}
+      this.state = {user:[]}
     }
 
     componentDidMount() {

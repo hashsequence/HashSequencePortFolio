@@ -55,7 +55,17 @@ func init() {
   return
 }
 
-func GetUser(users_id int) User {
+func GetUser(users_id int) []User {
+  user := User{}
+  err := Db.QueryRow("SELECT  name, summary from users WHERE id = $1", users_id).Scan(&user.Name, &user.Summary)
+  if err != nil {
+    panic(err.Error())
+  }
+  fmt.Println(user)
+  return []User{user}
+}
+
+func GetUserObj(users_id int) User {
   user := User{}
   err := Db.QueryRow("SELECT  name, summary from users WHERE id = $1", users_id).Scan(&user.Name, &user.Summary)
   if err != nil {
