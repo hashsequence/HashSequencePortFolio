@@ -13,7 +13,7 @@ psql -c "ALTER USER postgres WITH PASSWORD 'password'" -d HashSequencePortfolio
 const (
   host     = "localhost"
   port     =  5432
-  user     = "postgres"
+  user     = "tester"
   password = "password"
   dbname   = "HashSequencePortfolio"
 )
